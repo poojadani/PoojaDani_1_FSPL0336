@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 public class DepartmentService {
@@ -27,5 +28,11 @@ public class DepartmentService {
         dept.setUpdatedBy(departmentDto.getUpdatedBy());
         dept.setUpdatedDate(LocalDateTime.now());
         return departmentRepository.save(dept);
+    }
+
+    public List<Department> getAllDept()
+    {
+        List<Department> list = departmentRepository.findAll();
+        return list;
     }
 }
