@@ -1,18 +1,18 @@
-package com.sampleProject.EmployeeManagementSystem.entity;
+package com.sampleProject.EmployeeManagementSystem.dto;
 
-import jakarta.persistence.*;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.Data;
 
 import java.time.LocalDateTime;
 
-@Entity
 @Data
-@Table(name = "Designation")
-public class Designation {
-
+public class DesignationDto
+{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int designationId;
+    //private int designationId;
     private String designationName;
 
     private boolean isActive;
