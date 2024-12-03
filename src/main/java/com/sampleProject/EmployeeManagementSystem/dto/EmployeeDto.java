@@ -1,18 +1,11 @@
-package com.sampleProject.EmployeeManagementSystem.entity;
+package com.sampleProject.EmployeeManagementSystem.dto;
 
-import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDateTime;
 
-@Entity
 @Data
-@Table(name = "Employee")
-public class Employee {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long employeeId;
+public class EmployeeDto {
     private String employeeName;
     private String email;
     private double sal;
@@ -22,5 +15,4 @@ public class Employee {
     private LocalDateTime createdDate;
     private String updatedBy;
     private LocalDateTime updatedDate;
-
 }
