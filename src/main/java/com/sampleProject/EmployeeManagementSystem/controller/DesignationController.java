@@ -34,7 +34,4 @@ public class DesignationController
     {
         return new ResponseEntity<>(designationService.getAllDesignation(), HttpStatus.FOUND);
     }
-
-
-
 }
